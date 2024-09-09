@@ -6,7 +6,6 @@ import PostCard from "../components/PostCard.jsx";
 import Fakultet from "../components/Fakultet.jsx";
 import Hamkor from "../components/Hamkor.jsx";
 
-import StudentHemis from "../assets/icons/study.svg"
 import { RectangleStackIcon } from "@heroicons/react/24/solid";
 import { AcademicCapIcon, InformationCircleIcon } from "@heroicons/react/16/solid";
 import { Link } from "react-router-dom";
@@ -121,11 +120,11 @@ const Base = () => {
                     <div className='border border-blue-gray-200 w-2/5 mx-auto'></div>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 p-2 md:p-10 lg:px-52'>
-                    <Card>1 kurs</Card>
-                    <Card>2 kurs</Card>
-                    <Card>3 kurs</Card>
-                    <Card>4 kurs</Card>
-                    <Card>5 kurs</Card>
+                    <Card className="text-lg font-bold uppercase mx-auto p-16 cursor-pointer text-blue-600 hover:text-blue-gray-400">1 kurs</Card>
+                    <Card className="text-lg font-bold uppercase mx-auto p-16 cursor-pointer text-blue-600 hover:text-blue-gray-400">2 kurs</Card>
+                    <Card className="text-lg font-bold uppercase mx-auto p-16 cursor-pointer text-blue-600 hover:text-blue-gray-400">3 kurs</Card>
+                    <Card className="text-lg font-bold uppercase mx-auto p-16 cursor-pointer text-blue-600 hover:text-blue-gray-400">4 kurs</Card>
+                    <Card className="text-lg font-bold uppercase mx-auto p-16 cursor-pointer text-blue-600 hover:text-blue-gray-400">5 kurs</Card>
                 </div>
             </section>
 

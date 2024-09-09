@@ -3,16 +3,16 @@ import Logo from '../assets/logo.png'
 
 const SITEMAP = [
     {
-        title: "Company",
-        links: ["About Us", "Careers", "Our Team", "Projects"],
+        title: "Institut",
+        links: ["Institut haqida", "O'quv binolari", "Tuzilma", "Normativ hujjatlar"],
     },
     {
-        title: "Help Center",
-        links: ["Discord", "Twitter", "GitHub", "Contact Us"],
+        title: "Yangiliklar",
+        links: ["E'lomlar", "Tanlovlar", "Yangiliklar", "Vakansiyalar"],
     },
     {
-        title: "Resources",
-        links: ["Blog", "Newsletter", "Free Products", "Affiliate Program"],
+        title: "Platformalar",
+        links: ["HEMIS", "Moodle", "Kutubxona", "Ilmiy jurnal"],
     },
 ];
 
@@ -25,54 +25,18 @@ const Footer = () => {
     return (
         <footer className="relative w-full bg-blue-700">
             <div className="mx-auto w-full px-8">
-                <div className="w-full mx-auto grid grid-cols-2 gap-20">
+                <div className="w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-20">
                     <div className="w-full flex flex-col my-auto">
                         <div className="flex gap-3">
                             <img src={Logo} className="h-20 aspect-square" alt="logo" />
-                            <Typography >
-                                Ташкентский<br /> Фармацевтический <br /> Институт
+                            <Typography color="white" className="font-medium" variant='paragraph'>
+                                Toshkent<br /> Farmatsevtika <br /> Instituti
                             </Typography>
                         </div>
-                        <Typography variant="small" color="white" className="text-left mt-4">
-                            Получите престижное медицинское образование в Ташкенте! Здесь работают достойные преемники великих учетелей-педиаторов - замечательные люди с мировым именем, прекрасные врачи и блестящие оранизаторы.
+                        <Typography variant="paragraph" color="white" className="text-left mt-4">
+                         Veb-saytdagi ma&apos;lumotlardan foydalanilganda, manbaga havola qilish majburiy.
                         </Typography>
-                    </div>
-
-                    <div className="mx-auto grid w-full grid-cols-1 gap-2 py-12 md:grid-cols-2 lg:grid-cols-3">
-                        {SITEMAP.map(({ title, links }, key) => (
-                            <div key={key} className="w-full">
-                                <Typography
-                                    variant="small"
-                                    color="white"
-                                    className="mb-4 font-bold uppercase opacity-50"
-                                >
-                                    {title}
-                                </Typography>
-                                <ul className="space-y-1">
-                                    {links.map((link, key) => (
-                                        <Typography key={key} as="li" color="white" className="font-normal">
-                                            <a
-                                                href="#"
-                                                className="inline-block py-1 pr-2 transition-transform hover:scale-105"
-                                            >
-                                                {link}
-                                            </a>
-                                        </Typography>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
-                    <Typography
-                        variant="small"
-                        className="mb-4 text-center font-normal text-white md:mb-0"
-                    >
-                        &copy; {currentYear} <a href="https://material-tailwind.com/">Material Tailwind</a>. All
-                        Rights Reserved.
-                    </Typography>
-                    <div className="flex gap-4 text-white sm:justify-center">
+                        <div className="flex gap-4 text-white sm:justify-start">
                         <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
                             <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path
@@ -115,6 +79,42 @@ const Footer = () => {
                             </svg>
                         </Typography>
                     </div>
+                    </div>
+
+                    <div className="mx-auto grid w-full grid-cols-1 gap-2 py-12 md:grid-cols-3 lg:grid-cols-3">
+                        {SITEMAP.map(({ title, links }, key) => (
+                            <div key={key} className="w-full">
+                                <Typography
+                                    variant="small"
+                                    color="white"
+                                    className="mb-4 font-bold uppercase opacity-50"
+                                >
+                                    {title}
+                                </Typography>
+                                <ul className="space-y-1">
+                                    {links.map((link, key) => (
+                                        <Typography key={key} as="li" color="white" className="font-normal">
+                                            <a
+                                                href="#"
+                                                className="inline-block py-1 pr-2 transition-transform hover:scale-105"
+                                            >
+                                                {link}
+                                            </a>
+                                        </Typography>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
+                    <Typography
+                        variant="small"
+                        className="mb-4 text-center font-normal text-white md:mb-0"
+                    >
+                    &copy; {currentYear} Toshkent farmatsevtika instituti.
+                    </Typography>
+                    
                 </div>
             </div>
         </footer>
