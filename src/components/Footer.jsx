@@ -30,7 +30,7 @@ const Footer = () => {
                         <div className="flex gap-3">
                             <img src={Logo} className="h-20 aspect-square" alt="logo" />
                             <Typography >
-                                Ташкентский<br /> Педиатрический <br />Медицинский Институт
+                                Ташкентский<br /> Фармацевтический <br /> Институт
                             </Typography>
                         </div>
                         <Typography variant="small" color="white" className="text-left mt-4">
