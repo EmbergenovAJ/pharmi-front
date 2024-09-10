@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import classes from "./Drawer.module.css";
 import { changeAnchor } from "../../helpers/change-anchors.jsx";
-import DrawerMenu from "../../components/DrawerMenu.jsx";
 import {Link} from "react-router-dom";
 
 export const Drawer = (props) => {
@@ -43,7 +42,7 @@ export const Drawer = (props) => {
                     <div className='col-span-1'>
                         <h2 className='text-xl uppercase font-semibold text-gray-700'>Institut</h2>
                         <ul className=' font-medium text-blue-400'>
-                            <li className='hover:text-blue-700 cursor-pointer'>Rektor tabrigi</li>
+                            <li onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Rektor tabrigi</li>
                             <li onClick={onClose} className='hover:text-blue-700 cursor-pointer'><Link to='/institut-haqida'>Institut
                                 haqida</Link></li>
                             <li onClick={onClose} className='hover:text-blue-700 cursor-pointer'><Link to='/institut-binolari'>O`quv
@@ -51,44 +50,44 @@ export const Drawer = (props) => {
                             {/* <li className='hover:text-blue-700 cursor-pointer'>Institut tarixi</li> */}
                             <li onClick={onClose} className='hover:text-blue-700 cursor-pointer'><Link to='/institut-nizomi'>Institut
                                 nizomi</Link></li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Institut pasporti</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Institut tuzilmasi</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Normativ huquqiy hujjatlar</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Aloqa ma'lumotlari</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Institut pasporti</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Institut tuzilmasi</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Normativ huquqiy hujjatlar</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Aloqa ma'lumotlari</li>
                         </ul>
                     </div>
                     <div className='col-span-1'>
                         <h2 className='text-xl uppercase font-semibold text-gray-700'>Institut tuzilmasi</h2>
                         <ul className=' font-medium text-blue-400'>
-                            <li className='hover:text-blue-700 cursor-pointer'>Kuzatuv kengashi</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Institut kengashi</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Institut rahbariyati</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Fakultetlar</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Markazlar</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Bo'limlar</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Kafedralar</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Institut laboratoriyasi</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Institut litseyi</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Institut texnikumlari</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Kuzatuv kengashi</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Institut kengashi</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Institut rahbariyati</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'><Link to='/study/bachelor/'>Fakultetlar</Link></li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Markazlar</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Bo'limlar</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Kafedralar</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Institut laboratoriyasi</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Institut litseyi</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Institut texnikumlari</li>
                         </ul>
                     </div>
                     <div className='col-span-1'>
                         <h2 className='text-xl uppercase font-semibold text-gray-700'>O'quv faoliyat</h2>
                         <ul className=' font-medium text-blue-400'>
-                            <li className='hover:text-blue-700 cursor-pointer'>Malakaviy tavsifnoma</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Malaka talablari</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Reyting nizomi</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Ta'lim standartlari</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>O'quv rejalar</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Na'munaviy fan dasturlari</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Kredit-modul tizimi</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Talabalar bilimini baholash markazi
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Malakaviy tavsifnoma</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Malaka talablari</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Reyting nizomi</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Ta'lim standartlari</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>O'quv rejalar</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Na'munaviy fan dasturlari</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Kredit-modul tizimi</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Talabalar bilimini baholash markazi
                                 bilimini baholash
                             </li>
-                            <li className='hover:text-blue-700 cursor-pointer'>O'quv faoliyatini baholash mezonlari</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Bakalavriat</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Magistratura</li>
-                            <li className='hover:text-blue-700 cursor-pointer'>Malaka oshirish kurslari</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>O'quv faoliyatini baholash mezonlari</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Bakalavriat</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Magistratura</li>
+                            <li  onClick={onClose} className='hover:text-blue-700 cursor-pointer'>Malaka oshirish kurslari</li>
                         </ul>
                     </div>
                     <div className='col-span-1'>

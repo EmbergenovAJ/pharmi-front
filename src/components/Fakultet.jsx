@@ -5,6 +5,7 @@ import {
     Typography,
     Avatar,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 
 
@@ -13,7 +14,7 @@ const arr = [
         title: 'Farmatsiya',
         dekan: 'Xaydarov V.R.',
         avatarUrl: '',
-        link: ''
+        link: '/study/bachelor/facult'
 
     }
     ,
@@ -21,7 +22,7 @@ const arr = [
         title: 'Sanoat Farmatsiya',
         dekan: 'Mamatqulov Z.U.',
         avatarUrl:'',
-        link: ''
+        link: '/study/bachelor/facult'
 
     }
     ,
@@ -29,14 +30,14 @@ const arr = [
         title: 'Farmatsevt kadrlar malakasini oshirish va qayta tayyorlash',
         dekan: 'Usmonov U.X.',
         avatarUrl: '../assets/usmanov.jpg',
-        link: ''
+        link: '/study/bachelor/facult'
 
     } ,
     {
         title: 'Piter',
         dekan: 'Xashirbayeva D.M.',
         avatarUrl: '../assets/xashirbayeva.jpg',
-        link: ''
+        link: '/study/bachelor/facult'
 
     }
 ];
@@ -44,7 +45,8 @@ const arr = [
 const Fakultet = () => {
     return (
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 p-2 md:p-10 lg:px-52">
-            {arr.map(({title, dekan, avatarUrl}, key) =>(
+            {arr.map(({title, dekan, avatarUrl, link}, key) =>(
+                <Link to={link} key={key}>
                 <Card
                 key={key}
                 shadow={false}
@@ -78,6 +80,7 @@ const Fakultet = () => {
                     />
                 </CardBody>
             </Card>
+                </Link>
             ))}
         </div>
     );
