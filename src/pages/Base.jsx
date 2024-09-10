@@ -138,14 +138,9 @@ const Base = () => {
                 <p className='text-center mb-6 font-display text-xl'>
                     Bizning fakultet va yo`nalishlar bo`yicha kerakli ma`lumotlarni oling.
                 </p>
-
-                <div className='grid grid-cols-2 md:grid-cols-3 gap-6 p-2 md:p-10 lg:px-52'>
+                
                     <Fakultet/>
-                    <Fakultet/>
-                    <Fakultet/>
-                    <Fakultet/>
-                    <Fakultet/>
-                </div>
+                    
             </section>
 
             <section>
