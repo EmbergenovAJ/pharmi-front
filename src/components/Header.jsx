@@ -1,6 +1,5 @@
-import React, { useCallback, useState } from 'react';
+import { useState } from 'react';
 import Logo from '../assets/logo.png'
-import { Drawer } from "./drawer/index.jsx";
 import { Link } from 'react-router-dom';
 import { BurgerMenu } from './BurgerMenu/BurgerMenu.jsx';
 import MenuButton from './BurgerMenu/MenuButton.jsx';

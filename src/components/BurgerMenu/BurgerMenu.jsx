@@ -1,5 +1,3 @@
-import { h2 } from "framer-motion/client"
-
 const data = [
     {
         mainId: 1,

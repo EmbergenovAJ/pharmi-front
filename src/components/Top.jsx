@@ -1,5 +1,4 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import IGerb from "../assets/icons/uzb-gerb.png";
 
 const Top = () => {
@@ -8,16 +7,16 @@ const Top = () => {
             <div className='mx-auto flex'>
                 <ul className='flex gap-6'>
                     <li><Link to=''>
-                        <img className='w-6' src={IGerb} alt='gerb'/>
+                        <img className='w-6' src={IGerb} alt='gerb' />
                     </Link></li>
                     <li><Link to=''>
-                        <img className='w-6' src={IGerb} alt='gerb'/>
+                        <img className='w-6' src={IGerb} alt='gerb' />
                     </Link></li>
                     <li><Link to=''>
-                        <img className='w-6' src={IGerb} alt='gerb'/>
+                        <img className='w-6' src={IGerb} alt='gerb' />
                     </Link></li>
                     <li><Link to=''>
-                        <img className='w-6' src={IGerb} alt='gerb'/>
+                        <img className='w-6' src={IGerb} alt='gerb' />
                     </Link></li>
                 </ul>
                 <ul className='flex gap-4 ml-3'>
