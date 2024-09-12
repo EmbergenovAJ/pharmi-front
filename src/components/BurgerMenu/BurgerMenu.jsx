@@ -161,13 +161,13 @@ export const BurgerMenu = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 lg:px-20 text-white py-6">
             {data.map(item => {
                 return (
-                    <div key={item.mainID} className="gap-4 flex flex-col">
+                    <div key={item.mainID + 'main'} className="gap-4 flex flex-col">
                         <div>
                             <p className="font-bold text-2xl">{item.title}</p>
                         </div>
                         <div className="flex flex-col gap-2">
                             {item.subItems.map(subItem => {
-                                return <p key={subItem.subId} className="cursor-pointer hover:underline w-fit">{subItem.title}</p>
+                                return <p key={subItem.subId + 'sub'} className="cursor-pointer hover:underline w-fit">{subItem.title}</p>
                             })}
                         </div>
                     </div>

@@ -33,7 +33,7 @@ const Header = () => {
             <div className=' z-20'>
                 <MenuButton isOpen={open} toggleOpen={setOpen} />
             </div>
-            <motion.div className='absolute left-0 top-0 z-10 bg-black w-dvw h-dvh overflow-y-auto overscroll-none overflow-x-hidden'
+            <motion.div className='absolute left-0 top-0 z-10 bg-[rgb(9,156,185)] bg-gradient-to-r from-[#099cb9] via-[#163c87] via-62%  to-[#090979] w-dvw h-dvh overflow-y-auto overscroll-none overflow-x-hidden'
                 animate={open ? "open" : "closed"}
                 variants={variants}
                 transition={{ duration: 0.5 }}
