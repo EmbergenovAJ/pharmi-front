@@ -1,16 +1,19 @@
+import {Link} from "react-router-dom";
+
 const data = [
     {
         mainId: 1,
         title: 'Institut',
+        link: '/institut',
         subItems: [
-            { subId: 1, title: 'Rektor tabrigi', link: '/rektor-tabrigi' },
-            { subId: 2, title: 'Institut haqida', link: '/institut-haqida' },
-            { subId: 3, title: 'O`quv binolari', link: '/oquv-binolari' },
-            { subId: 4, title: 'Institut nizomi', link: '/institut-nizomi' },
-            { subId: 5, title: 'Institut pasporti', link: '/institut-passporti' },
-            { subId: 6, title: 'Institut tuzilmasi', link: '/institut-tuzilmasi' },
-            { subId: 7, title: 'Normativ huquqiy hujjatlar', link: '/normativ-huquqiy-hujjatlar' },
-            { subId: 8, title: "Aloqa ma'lumotlari", link: "/aloqa-ma'lumotlari" }]
+            { subId: 1, title: 'Rektor tabrigi', link: '/institut/rektor-tabrigi' },
+            { subId: 2, title: 'Institut haqida', link: '/institut/institut-haqida' },
+            { subId: 3, title: 'O`quv binolari', link: '/institut/oquv-binolari' },
+            { subId: 4, title: 'Institut nizomi', link: '/institut/institut-nizomi' },
+            { subId: 5, title: 'Institut pasporti', link: '/institut/institut-passporti' },
+            { subId: 6, title: 'Institut tuzilmasi', link: '/institut/institut-tuzilmasi' },
+            { subId: 7, title: 'Normativ huquqiy hujjatlar', link: '/institut/normativ-huquqiy-hujjatlar' },
+            { subId: 8, title: "Aloqa ma'lumotlari", link: "/institut/aloqa-ma'lumotlari" }]
     },
     {
         mainID: 2,
@@ -165,7 +168,7 @@ export const BurgerMenu = () => {
                         </div>
                         <div className="flex flex-col gap-2">
                             {item.subItems.map(subItem => {
-                                return <p key={subItem.subId + 'sub'} className="cursor-pointer hover:underline w-fit">{subItem.title}</p>
+                                return <p key={subItem.subId + 'sub'} className="cursor-pointer hover:underline w-fit"><Link to={subItem.link}>{subItem.title}</Link> </p>
                             })}
                         </div>
                     </div>

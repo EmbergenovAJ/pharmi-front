@@ -1,11 +1,6 @@
 import { Card, Typography, Drawer, IconButton, Button } from "@material-tailwind/react";
 
-import React, { useState } from "react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-
+import React from "react";
 const TABLE_HEAD = [ "F.I.SH.", "Lavozimi"];
  
 const TABLE_ROWS = [
@@ -35,7 +30,7 @@ const Nizom = () => {
     return (
         <div>
             <div>
-            <div size="md" onClick={openDrawer} className="fixed right-0">
+            <div size="md" onClick={openDrawer} className="">
                 {isDrawerOpen ? 
                 <Button>X</Button>
                  : 

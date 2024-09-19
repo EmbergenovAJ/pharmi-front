@@ -17,28 +17,46 @@ const Header = () => {
     // const handleClick = useCallback(() => setOpen(!open), []);
 
     return (
-        <div className="p-3 flex items-center justify-between ">
+        <div className="p-3 flex items-center justify-between">
             <Link to='/'>
                 <div className="flex items-center">
 
-                    <img className='w-16' src={Logo} alt="logo" />
+                    <img className='w-16' src={Logo} alt="logo"/>
                     <div className="text-mds ml-2 font-medium font-text">
-                        Toshkent <br />
-                        Farmatsevtika <br />
+                        Toshkent <br/>
+                        Farmatsevtika <br/>
                         Instituti
                     </div>
                 </div>
             </Link>
-            <div className=' z-20'>
-                <MenuButton isOpen={open} toggleOpen={setOpen} />
+
+            <div className='flex items-center flex-end'>
+                <div className='mr-14'>
+                    <ul className="flex items-center text-md uppercase gap-6 text-md font-semibold text-blue-800">
+                        <Link to='/institut/about'>
+                            <li className='cursor-pointer'>Institut</li>
+                        </Link>
+                        <li className='cursor-pointer'>Faoliyat</li>
+                        <li className='cursor-pointer'>Talaba</li>
+                        <li className='cursor-pointer'>Abituriyent</li>
+                        <li className='cursor-pointer'>Yangiliklar</li>
+                        <li className='cursor-pointer'>Qabul 2024</li>
+                    </ul>
+                </div>
+
+
+                <div className=' z-20'>
+                    <MenuButton isOpen={open} toggleOpen={setOpen}/>
+                </div>
+                <motion.div
+                    className='absolute left-0 top-0 z-10 bg-[rgb(9,156,185)] bg-gradient-to-r from-[#099cb9] via-[#163c87] via-62%  to-[#090979] w-dvw h-dvh overflow-y-auto overscroll-none overflow-x-hidden'
+                    animate={open ? "open" : "closed"}
+                    variants={variants}
+                    transition={{duration: 0.5}}
+                >
+                    <BurgerMenu open={open} toggleOpen={setOpen}/>
+                </motion.div>
             </div>
-            <motion.div className='absolute left-0 top-0 z-10 bg-[rgb(9,156,185)] bg-gradient-to-r from-[#099cb9] via-[#163c87] via-62%  to-[#090979] w-dvw h-dvh overflow-y-auto overscroll-none overflow-x-hidden'
-                animate={open ? "open" : "closed"}
-                variants={variants}
-                transition={{ duration: 0.5 }}
-            >
-                <BurgerMenu open={open} toggleOpen={setOpen} />
-            </motion.div>
             {/* <div className="App">
                     <button type="button" onClick={handleOpen}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
@@ -49,17 +67,6 @@ const Header = () => {
                     </button>
                     <Drawer anchor="right" open={open} onClose={handleClose} />
                 </div> */}
-            {/* <div>*/}
-            {/*    <ul className="flex items-center text-md uppercase gap-6">*/}
-            {/*        <li>Institut</li>*/}
-            {/*        <li>Faoliyat</li>*/}
-            {/*        <li>Talaba</li>*/}
-            {/*        <li>Abituriyent</li>*/}
-            {/*        <li>Yangiliklar</li>*/}
-            {/*        <li>Qabul 2024</li>*/}
-            {/*    </ul>*/}
-            {/*</div> */}
-
 
 
         </div>
