@@ -1,6 +1,18 @@
 import {Outlet} from "react-router-dom";
 import List from '../../components/Layout/InstitutePageSideBar.jsx'
 
+
+const links = [
+    {
+        name:'Institut haqida',
+        link: 'about'
+    },
+    {
+        name: 'O`quv binolar',
+        link: 'buildings'
+    }
+]
+
 const InstitutePageLayout = () => {
     return (
         <>
@@ -11,7 +23,7 @@ const InstitutePageLayout = () => {
                         <Outlet/>
                     </div>
                     <div className='col-span-1 px-4'>
-                        <List/>
+                        <List links={links} />
                     </div>
 
                 </div>
