@@ -6,14 +6,14 @@ const data = [
         title: 'Institut',
         link: '/institut',
         subItems: [
-            { subId: 1, title: 'Rektor tabrigi', link: '/institut/rektor-tabrigi' },
-            { subId: 2, title: 'Institut haqida', link: '/institut/institut-haqida' },
-            { subId: 3, title: 'O`quv binolari', link: '/institut/oquv-binolari' },
+            { subId: 1, title: 'Rektor tabrigi', link: '/institut/greeting' },
+            { subId: 2, title: 'Institut haqida', link: '/institut/about' },
+            { subId: 3, title: 'O`quv binolari', link: '/institut/buildings' },
             { subId: 4, title: 'Institut nizomi', link: '/institut/institut-nizomi' },
-            { subId: 5, title: 'Institut pasporti', link: '/institut/institut-passporti' },
-            { subId: 6, title: 'Institut tuzilmasi', link: '/institut/institut-tuzilmasi' },
-            { subId: 7, title: 'Normativ huquqiy hujjatlar', link: '/institut/normativ-huquqiy-hujjatlar' },
-            { subId: 8, title: "Aloqa ma'lumotlari", link: "/institut/aloqa-ma'lumotlari" }]
+            { subId: 5, title: 'Institut pasporti', link: '/institut/pass' },
+            { subId: 6, title: 'Institut tuzilmasi', link: '/institut/tuzilma' },
+            { subId: 7, title: 'Normativ huquqiy hujjatlar', link: '/institut/docs' },
+            { subId: 8, title: "Aloqa ma'lumotlari", link: "/institut/contacts" }]
     },
     {
         mainID: 2,
@@ -22,7 +22,7 @@ const data = [
             { subId: 1, title: 'Kuzatuv kengashi', link: '/kuzatuv-kengashi' },
             { subId: 2, title: 'Institut kengashi', link: '/institut-kengashi' },
             { subId: 3, title: 'Institut rahbariyati', link: '/institut-rahbariyati' },
-            { subId: 4, title: 'Fakultetlar', link: '/fakultetlar' },
+            { subId: 4, title: 'Fakultetlar', link: '/study/bachelor/facult' },
             { subId: 5, title: 'Markazlar', link: '/markazlar' },
             { subId: 6, title: 'Bo`limlar', link: "/bo'limlar" },
             { subId: 7, title: 'Kafedralar', link: '/kafedralar' },
@@ -157,7 +157,7 @@ const data = [
     }
 ]
 
-export const BurgerMenu = () => {
+export const BurgerMenu = (isOpen ,toggleOpen) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 lg:px-20 text-white py-6">
             {data.map(item => {
@@ -168,7 +168,7 @@ export const BurgerMenu = () => {
                         </div>
                         <div className="flex flex-col gap-2">
                             {item.subItems.map(subItem => {
-                                return <p key={subItem.subId + 'sub'} className="cursor-pointer hover:underline w-fit"><Link to={subItem.link}>{subItem.title}</Link> </p>
+                                return <p key={subItem.subId + 'sub'} className="cursor-pointer hover:underline w-fit"><Link to={subItem.link} onClick={() => toggleOpen(!isOpen)}>{subItem.title}</Link> </p>
                             })}
                         </div>
                     </div>

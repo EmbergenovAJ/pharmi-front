@@ -4,13 +4,37 @@ import List from '../../components/Layout/InstitutePageSideBar.jsx'
 
 const links = [
     {
+        name: 'Rektor tabrigi',
+        link: 'greeting'
+    },
+    {
         name:'Institut haqida',
         link: 'about'
     },
     {
         name: 'O`quv binolar',
         link: 'buildings'
-    }
+    },
+    {
+        name: 'Institut pasporti',
+        link: 'pass'
+    },
+    {
+        name: 'Tuzilma',
+        link: 'tuzilma'
+    },
+    {
+        name: 'Institut nizomi',
+        link: 'institut-nizomi'
+    },
+    {
+        name: 'Normativ huquqiy hujjatlar',
+        link: 'docs'
+    },
+    {
+        name: 'Aloqa ma`lumotlari',
+        link: 'contacts'
+    },
 ]
 
 const InstitutePageLayout = () => {
