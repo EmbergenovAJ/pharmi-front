@@ -15,6 +15,8 @@ import Contacts from "../pages/Institut/Contacts.jsx";
 import StructureLayout from "../pages/Structure/StructureLayout.jsx";
 import ObservConcil from "../pages/Structure/ObservConcil.jsx";
 import InstituteCouncil from "../pages/Structure/InstituteCouncil.jsx";
+import NewsLayout from "../pages/News/NewsLayout.jsx";
+import News from "../pages/News/News.jsx";
 
 const router = createBrowserRouter(createRoutesFromElements(
     <Route>
@@ -35,6 +37,9 @@ const router = createBrowserRouter(createRoutesFromElements(
             <Route path='structure' element={<StructureLayout/>}>
                 <Route path='observ' element={<ObservConcil />} />
                 <Route path='council' element={<InstituteCouncil/>} />
+            </Route>
+            <Route path='news' element={<NewsLayout/>} >
+                <Route path='news' element={<News/>} />
             </Route>
         </Route>
     </Route>

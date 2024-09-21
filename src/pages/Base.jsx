@@ -73,9 +73,11 @@ const Base = () => {
 
                 </div>
                 <div className='flex justify-center'>
-                    <Button variant='outlined' size='lg'>
-                        Barcha yangiliklar
-                    </Button>
+                    <Link to='/news/news'>
+                        <Button variant='outlined' size='lg'>
+                            Barcha yangiliklar
+                        </Button>
+                    </Link>
                 </div>
             </section>
 

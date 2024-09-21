@@ -6,6 +6,7 @@ import {
     Button,
 } from "@material-tailwind/react";
 
+
 const PostCard = () => {
     return (
         <div>
