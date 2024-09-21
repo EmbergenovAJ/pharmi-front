@@ -39,7 +39,9 @@ const Header = () => {
                         <li className='cursor-pointer'>Faoliyat</li>
                         <li className='cursor-pointer'>Talaba</li>
                         <li className='cursor-pointer'>Abituriyent</li>
-                        <li className='cursor-pointer'>Yangiliklar</li>
+                        <Link to='/news/news'>
+                            <li className='cursor-pointer'>Yangiliklar</li>
+                        </Link>
                         <li className='cursor-pointer'>Qabul 2024</li>
                     </ul>
                 </div>

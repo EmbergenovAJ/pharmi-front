@@ -8,17 +8,21 @@ const links = [
         link: 'news'
     },
     {
-        name: 'E`lon',
-        link: 'push'
+        name: 'E`lonlar',
+        link: 'elonlar'
     },
     {
-        name: 'Tadbirlar',
-        link: 'news'
+        name: 'Tanlovlar',
+        link: 'events'
     },
     {
-        name: 'Yangiliklar',
-        link: 'news'
+        name: 'OAV biz haqimizda',
+        link: 'oav-about-us'
     },
+    {
+        name:'Voqealar',
+        link: 'voqealar'
+    }
 
 ]
 

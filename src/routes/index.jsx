@@ -17,13 +17,25 @@ import ObservConcil from "../pages/Structure/ObservConcil.jsx";
 import InstituteCouncil from "../pages/Structure/InstituteCouncil.jsx";
 import NewsLayout from "../pages/News/NewsLayout.jsx";
 import News from "../pages/News/News.jsx";
+import ElonMusk from "../pages/News/ElonMusk.jsx";
+import Tanlovlar from "../pages/News/Tanlovlar.jsx";
+import Voqealar from "../pages/News/Voqealar.jsx";
+import Oav from "../pages/News/Oav.jsx";
+import TopManagment from "../pages/Structure/TopManagment.jsx";
+import Sanoat from "../pages/Facultets/Sanoat.jsx";
 
 const router = createBrowserRouter(createRoutesFromElements(
     <Route>
+        {/*Главная обертка*/}
         <Route path="/" element={<Layout/>}>
-            <Route index element={<Base/>} />
+            <Route index element={<Base/>} />{/*Главная страница*/}
             <Route path="/study/bachelor" element={<Bachelor/>} />
-            <Route path="/study/bachelor/facult" element={<FacultPage/>} />
+            {/*Факультеты*/}
+            <Route path="/facult" element={<FacultPage/>} >
+                <Route path='/facult/sanoat-farmatsiya' element={<Sanoat />} />
+                <Route path='/facult/sanoat-farmatsiya' element={<Sanoat />} />
+            </Route>
+            {/*Страница института*/}
             <Route path='/institut' element={<InstitutePageLayout/>} >
                 <Route path='about' element={<About/>} />
                 <Route path='buildings' element={<Binolar/>} />
@@ -34,12 +46,21 @@ const router = createBrowserRouter(createRoutesFromElements(
                 <Route path='pass' element={<PassInstitute/>} />
                 <Route path='contacts' element={<Contacts/>} />
             </Route>
+            {/*Страница структуры института*/}
             <Route path='structure' element={<StructureLayout/>}>
                 <Route path='observ' element={<ObservConcil />} />
                 <Route path='council' element={<InstituteCouncil/>} />
+                <Route path='managment' element={<TopManagment/>} />
+                {/*<Route path='council' element={<Fa/>} />*/}
+
             </Route>
+            {/*Страница новостей*/}
             <Route path='news' element={<NewsLayout/>} >
                 <Route path='news' element={<News/>} />
+                <Route path='elonlar' element={<ElonMusk/>} />
+                <Route path='events' element={<Tanlovlar/>} />
+                <Route path='voqealar' element={<Voqealar />} />
+                <Route path='oav-about-us' element={<Oav />} />
             </Route>
         </Route>
     </Route>

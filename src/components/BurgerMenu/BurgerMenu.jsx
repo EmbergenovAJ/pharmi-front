@@ -19,8 +19,8 @@ const data = [
         mainID: 2,
         title: "Institut tuzilmasi",
         subItems: [
-            { subId: 1, title: 'Kuzatuv kengashi', link: '/kuzatuv-kengashi' },
-            { subId: 2, title: 'Institut kengashi', link: '/institut-kengashi' },
+            { subId: 1, title: 'Kuzatuv kengashi', link: '/structure/observ' },
+            { subId: 2, title: 'Institut kengashi', link: '/structure/council' },
             { subId: 3, title: 'Institut rahbariyati', link: '/institut-rahbariyati' },
             { subId: 4, title: 'Fakultetlar', link: '/study/bachelor/facult' },
             { subId: 5, title: 'Markazlar', link: '/markazlar' },
@@ -42,7 +42,9 @@ const data = [
             { subId: 5, title: 'O`quv rejalar', link: '/oquv-rejalar' },
             { subId: 6, title: "Na'munaviy fan dasturlari", link: '/namunaviy-fan-dasturlari' },
             { subId: 7, title: 'Kredit-modul tizimi', link: '/kredit-modul-tizimi' },
-            { subId: 8, title: 'Talabalar bilimini baholash markazi', link: '/talabalar-bilimini-baholash-markazi' }
+            { subId: 8, title: 'Talabalar bilimini baholash markazi', link: '/talabalar-bilimini-baholash-markazi' },
+            { subId: 9, title: 'Bakalavriat', link: '/facult' },
+            { subId: 10, title: 'Magistratura', link: '/magistratura' },
         ]
     },
     {
